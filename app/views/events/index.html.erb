@@ -1,0 +1,10 @@
+<%= link_to "チーム日程を登録する", new_event_path(@user), class: "post" %>
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= event.title %>
+    </div>
+  <% end %>
+<% end %>

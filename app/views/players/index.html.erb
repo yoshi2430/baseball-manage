@@ -1,5 +1,7 @@
 <div class="index-main">
-  <h1 class="title">野球チーム選手管理アプリ</h1>
+  <h1 class="title">野球チーム管理アプリ</h1>
+  <%= link_to "チーム日程", events_path(@user), class: "post" %>
+  <%= link_to "選手登録", new_player_path, class: "post" %>
  <div class="team">
   <% if user_signed_in? %>
     <p>ようこそ<%= current_user.team_name %>さん！</p>
@@ -10,20 +12,25 @@
 
 <div class="player-contents">
   <h2 class="sub-title">選手一覧</h2>
-  <ul class="player-lists">
+
+  <ul class="player">
     
     <% @players.each do |player| %>
      <li class="list">
-      <div class='item-img-content'>
-          <%= image_tag player.image, class: "player-img" %>
+      <div class='item-img-content' onmouseover="showButtons(this)" onmouseout="hideButtons(this)">
+        <%= image_tag player.image, class: "player-img" %>
+          <span class="buttons">
+            <%= link_to "編集", edit_player_path(player), class: "edit-button" %>
+            <%= link_to "削除", player_path(player), data: { turbo_method: :delete }, class: "delete-button" %>
+            <%= link_to "詳細", player_path(player), class: "show-button" %>
+          </span>
+          
       </div>
       <div class='item-info'>
+        
           <h3 class='item-name'>
             <%= player.name %>
           </h3>
-         <%= link_to "編集", edit_player_path(player), class: "edit-button" %>
-         <%= link_to "削除", player_path(player), data: { turbo_method: :delete }, class: "delete-button" %>
-         <%= link_to "詳細", player_path(player), class: "show-button" %>
       </div>
       
      </li>
@@ -33,3 +40,14 @@
 </div>
 
 </div>
+
+<script>
+  function showButtons(element) {
+    element.querySelector('.buttons').style.display = 'block';
+  }
+
+  function hideButtons(element) {
+    element.querySelector('.buttons').style.display = 'none';
+  }
+</script>
+

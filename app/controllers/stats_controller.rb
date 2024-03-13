@@ -8,18 +8,6 @@ class StatsController < ApplicationController
   end
   end
 
-  def edit
-    @stat = Stat.find(params[:stat_id])
-  end
-
-  def update
-  @stat = Stat.find(params[:stat_id])
-  if @stat.update(stat_params)
-    redirect_to player_path(params[:player_id])
-  else
-    render :edit
-  end
-end
 
   def new
    @player = Player.find(params[:player_id]) 

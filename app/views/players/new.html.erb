@@ -2,6 +2,7 @@
   <div class="container">
     <h3>選手を登録する</h3>
     <%= form_with(model: @player, local: true) do |form| %>
+    <%= render 'shared/error_messages', model: form.object %>
       <div class="form-group">
         <%= form.label :写真, class: "form-label" %>
         <%= form.file_field :image, class: "form-control" %>
@@ -32,7 +33,7 @@
         <%= form.number_field :weight, class: "form-control" %>
       </div>
 
-      <%= form.submit "登録する", class: "btn btn-primary" %>
+      <%= form.submit "登録する", class: "post" %>
     <% end %>
   </div>
 </div>

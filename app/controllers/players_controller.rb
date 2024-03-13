@@ -12,9 +12,14 @@ class PlayersController < ApplicationController
   end
 
   def create
-    Player.create(player_params)
-    redirect_to '/'
+    @player = Player.new(player_params)
+    if @player.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
+  
 
   def show
     @player = Player.find(params[:id])
@@ -25,13 +30,18 @@ class PlayersController < ApplicationController
 
   def edit
     @player = Player.find(params[:id])
-   end
+  end
+  
 
    def update
-    player = Player.find(params[:id])
-    player.update(player_params)
-    redirect_to root_path
+    @player = Player.find(params[:id])
+    if @player.update(player_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
+  
 
   def destroy
     player = Player.find(params[:id])

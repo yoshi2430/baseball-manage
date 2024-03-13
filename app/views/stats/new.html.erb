@@ -1,7 +1,7 @@
 <div class="contents row">
   <div class="container">
     <h3>成績を登録する</h3>
-    <%= form_with(model: @stat, url: player_stats_path, local: true) do |form| %>
+    <%= form_with(model: @stat, url: player_stats_path(@player), local: true) do |form| %>
       <%= form.hidden_field :player_id, value: params[:player_id] %>
 
       <div class="form-group">

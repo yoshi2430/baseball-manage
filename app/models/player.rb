@@ -4,7 +4,7 @@ class Player < ApplicationRecord
   has_many :stats
 
   
-
+  validates :image, presence: true
   validates :name, presence: true
   validates :position, presence: true
   validates :birthday, presence: true

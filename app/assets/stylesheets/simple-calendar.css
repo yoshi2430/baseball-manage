@@ -1,0 +1,127 @@
+/* app/assets/stylesheets/simple_calendar_custom.scss */
+
+.simple-calendar {
+  width: 700px;  /* カレンダーの幅を調整 */
+  margin: 0 auto;  /* 中央寄せ */
+  border: 1px solid #ddd;
+  border-radius: 5px;  /* 角丸にする */
+}
+
+.calendar-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.calendar-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+td {
+  border: 1px solid #ddd;
+}
+
+.today {  /* 今日の日付 */
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* イベントがある日 */
+.event-day {
+  background-color: #f8f8ff;
+  max-width: 20px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+
+
+
+/* app/assets/stylesheets/simple_form_custom.scss */
+
+/* フォーム全体のスタイル */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* タイトル入力部分のスタイル */
+.title {
+  margin-bottom: 20px;
+}
+
+.title label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.title input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 開始日時選択部分のスタイル */
+.time {
+  margin-bottom: 20px;
+}
+
+.time label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.time select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 送信ボタン部分のスタイル */
+.submit {
+  text-align: center;
+}
+
+.submit input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit input[type="submit"]:hover {
+  background-color: red;
+}

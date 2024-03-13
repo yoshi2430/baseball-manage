@@ -10,13 +10,14 @@
   border-radius: 5px;
   text-align: center;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .team p {
   margin: 0;
 }
 
-.player-contents {
+.player {
   text-align: center;
 }
 
@@ -26,7 +27,7 @@
   color: black;
 }
 
-.player-lists {
+.player{
   list-style-type: none;
   padding: 0;
   margin: 0;

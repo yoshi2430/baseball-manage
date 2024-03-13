@@ -35,14 +35,12 @@
      
       <div class="stat-box">
    <h2 class="name">成績一覧</h2>
+   
   <table class="detail-table">
     <tbody>
       <% @stats.each do |stat| %>
        <tr> 
-        <td colspan="2">
-          <%= link_to "成績を編集する", edit_player_stat_path(player_id: @player.id, stat_id: stat.id), class: "post" %>
-          
-        </td>
+        
         </tr>
         <tr>
           <th class="detail-item">打席</th>
