@@ -1,7 +1,7 @@
 class Player < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  has_many :stats
+  has_many :stats, dependent: :destroy
 
   
   validates :image, presence: true

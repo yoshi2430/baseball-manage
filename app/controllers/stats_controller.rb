@@ -1,4 +1,5 @@
 class StatsController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   def create
     @stat = Stat.new(stat_params)
   if @stat.save
