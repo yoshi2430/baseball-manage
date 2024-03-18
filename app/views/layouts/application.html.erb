@@ -8,23 +8,40 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
   </head>
 
   <body>
     <header class="header">
+      
       <div class="header__bar row">
         <h1 class="header-logo"><a href="/">Baseball Management</a></h1>
-        <% if user_signed_in? %>
-          <div class="grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "post" %>
-            
-          </div>
-        <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-          </div>
-        <% end %>
+       <div id="navArea">
+    <nav>
+      <div class="inner">
+        <ul>
+          <li><%=link_to "ホーム", root_path %></li>
+          <!-- ログインしている場合にのみリンクを表示 -->
+          <% if user_signed_in? %>
+            <li><%= link_to "選手登録", new_player_path %></li>
+            <li><%= link_to "チーム日程", events_path(@user) %></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %></li>
+          <% else %>
+            <li><%= link_to "ログイン", new_user_session_path %></li>
+            <li><%= link_to "新規登録", new_user_registration_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="mask"></div>
+  </div>
       </div>
     </header>
     <%= yield %>
