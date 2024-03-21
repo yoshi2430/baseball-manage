@@ -32,11 +32,12 @@ https://baseball-manage.onrender.com
 少年野球チームのコーチをしている父が、選手の成績を記録として残せていないという課題に直面した。そのため、私は自分が開発したアプリを通じて、選手の情報やチームの日程を共有できれば便利だと考え、アプリの開発に取り組むことにした。
 
 # 実装した機能についての画像やGIF
-・選手登録機能: https://gyazo.com/e40bd7b091d24d1229d8e4c8772feeaa<br>
-・選手削除機能: https://gyazo.com/e58491cbcbe90814e5d2cc68b7bfe1e5<br>
-・選手編集機能: https://gyazo.com/a9511efd618c35da69332ae684161624<br>
-・選手成績登録機能: https://gyazo.com/207176093c8777283005c2d4a42a6b34<br>
-・チーム日程登録機能: https://gyazo.com/19fcf67a8321dba774ddf0ee789f5b01<br>
+・選手登録機能: ![e40bd7b091d24d1229d8e4c8772feeaa](https://github.com/yoshi2430/baseball-manage/assets/158545935/8a937fe1-76f9-4e84-9334-f0285dff7dc9)
+<br>
+・選手削除機能: [![Image from Gyazo](https://i.gyazo.com/e58491cbcbe90814e5d2cc68b7bfe1e5.gif)](https://gyazo.com/e58491cbcbe90814e5d2cc68b7bfe1e5)<br>
+・選手編集機能: [![Image from Gyazo](https://i.gyazo.com/a9511efd618c35da69332ae684161624.gif)](https://gyazo.com/a9511efd618c35da69332ae684161624)<br>
+・選手成績登録機能: [![Image from Gyazo](https://i.gyazo.com/207176093c8777283005c2d4a42a6b34.gif)](https://gyazo.com/207176093c8777283005c2d4a42a6b34)<br>
+・チーム日程登録機能: [![Image from Gyazo](https://i.gyazo.com/19fcf67a8321dba774ddf0ee789f5b01.gif)](https://gyazo.com/19fcf67a8321dba774ddf0ee789f5b01)<br>
 
 
 # 実装予定の機能
